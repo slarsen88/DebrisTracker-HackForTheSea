@@ -121,7 +121,7 @@ namespace DebrisCollector.Pages
 
         private async void UploadImageFromDevice(Stream stream)
         {
-            var account = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=debristrackerstorage;AccountKey=aL7YZJUZ72MQ0duZP0Rp9tOoa5dsklEGz/EEClAorzBr+5kaGPyfiVEJ2mNv/lmVNJMp0OpWoH7suFns8AGuaw==;EndpointSuffix=core.windows.net");
+            var account = CloudStorageAccount.Parse("");
             var client = account.CreateCloudBlobClient();
             var container = client.GetContainerReference("imagecontainer");
             await container.CreateIfNotExistsAsync();
