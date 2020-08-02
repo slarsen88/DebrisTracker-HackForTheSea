@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DebrisCollector.Pages.UploadImage">
+    <ContentPage.Content>
+               
+        <StackLayout VerticalOptions="End" Margin="10, 0, 10, 30">
+            <Image x:Name="image" HeightRequest="150" WidthRequest="150" VerticalOptions="Start"/>
+            <Button Text="Camera" Clicked="CameraButton_OnClicked"/>
+            <Button Text="Select an Image" 
+                    Clicked="SelectImageButton_Clicked"/>
+           <!-- <Image x:Name="selectedImage"/> -->
+
+
+            <Picker Title="Size" x:Name="pickerSize">
+                <Picker.Items>
+                    <x:String>2.5 - 10cm</x:String>
+                    <x:String>10 - 25cm</x:String>
+                    <x:String>25 - 50cm</x:String>
+                    <x:String>50 - 100cm</x:String>
+                    <x:String>1 - 2m</x:String>
+                    <x:String>2 - 5m</x:String>
+                    <x:String>5 - 10m</x:String>
+                    <x:String>10m+</x:String>
+                </Picker.Items>
+                
+            </Picker>
+
+            <Picker Title="Color" x:Name="pickerColor">
+                <Picker.Items>
+                    <x:String>R-Red</x:String>
+                    <x:String>O-Orange</x:String>
+                    <x:String>Y-Yellow/Gold</x:String>
+                    <x:String>Gn-Green</x:String>
+                    <x:String>BG-Blue-green</x:String>
+                    <x:String>Bu-Blue</x:String>
+                    <x:String>Pu-Purple</x:String>
+                    <x:String>W-White</x:String>
+                    <x:String>Bn-Brown</x:String>
+                    <x:String>Bk-Black</x:String>
+                    <x:String>GS-Grey/Silver</x:String>
+                    <x:String>C-Clear</x:String>
+                    <x:String>M-Multi</x:String>
+                </Picker.Items>
+               
+            </Picker>
+
+            <Picker Title="Material Type" x:Name="pickerMaterialType">
+                <Picker.Items>
+                    <x:String>Cement/Ceramic</x:String>
+                    <x:String>Glass</x:String>
+                    <x:String>Metal</x:String>
+                    <x:String>Paper/Cardboard</x:String>
+                    <x:String>Plastic</x:String>
+                    <x:String>Rubber</x:String>
+                    <x:String>Wood/Bamboo</x:String>
+                    <x:String>Multi</x:String>
+                    <x:String>Other</x:String>
+                    <x:String>Unkown</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Submit"
+                    x:Name="BtnSubmit"
+                    Clicked="BtnSubmit_OnClicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
