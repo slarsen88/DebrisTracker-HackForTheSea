@@ -121,7 +121,7 @@ namespace DebrisCollector.Pages
 
         private async void UploadImageFromDevice(Stream stream)
         {
-            var account = CloudStorageAccount.Parse("");
+            var account = CloudStorageAccount.Parse("<AZURE STRING>");
             var client = account.CreateCloudBlobClient();
             var container = client.GetContainerReference("imagecontainer");
             await container.CreateIfNotExistsAsync();
